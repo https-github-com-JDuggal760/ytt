@@ -12,6 +12,6 @@ cd blurVideo2
 #make a file list with all the videos names that need to be complied
 for f in *.mp4; do echo "file $f" >> file_list.txt ; done
 #compile the video
-ffmpeg -f concat -i file_list.txt final.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt final.mp4
 
 
